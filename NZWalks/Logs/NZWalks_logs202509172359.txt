@@ -1,0 +1,5 @@
+2025-09-17 23:59:29.630 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5125/api/Regions/dd37e01f-4a2b-41dd-b5b7-08ddf5568867 - null null
+2025-09-17 23:59:29.666 +05:30 [INF] Executing endpoint 'NZWalks.Controllers.RegionsController.Delete (NZWalks)'
+2025-09-17 23:59:29.669 +05:30 [INF] Route matched with {action = "Delete", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(System.Guid) on controller NZWalks.Controllers.RegionsController (NZWalks).
+2025-09-17 23:59:37.683 +05:30 [INF] Executed action NZWalks.Controllers.RegionsController.Delete (NZWalks) in 8006.8416ms
+2025-09-17 23:59:37.756 +05:30 [INF] Executed endpoint 'NZWalks.Controllers.RegionsController.Delete (NZWalks)'

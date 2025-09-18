@@ -1,0 +1,85 @@
+2025-09-17 23:41:29.183 +05:30 [INF] Executed action NZWalks.Controllers.RegionsController.Update (NZWalks) in 48913.6653ms
+2025-09-17 23:41:29.234 +05:30 [INF] Executed endpoint 'NZWalks.Controllers.RegionsController.Update (NZWalks)'
+2025-09-17 23:41:29.323 +05:30 [ERR]  a1e80360-97b8-4d94-9e02-def42653377d :  Unable to cast object of type 'System.Guid' to type 'NZWalks.Models.Domain.Region'.
+System.InvalidCastException: Unable to cast object of type 'System.Guid' to type 'NZWalks.Models.Domain.Region'.
+   at lambda_method91(Closure, QueryContext)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)
+   at NZWalks.Repository.SQLRegionRepository.UpdateAsync(Guid ID, Region region) in C:\Users\003V7R744\Desktop\Working\NZWalks\Repository\SQLRegionRepository.cs:line 49
+   at NZWalks.Controllers.RegionsController.Update(Guid id, UpdateRegionRequestDTO updateRegionRequest) in C:\Users\003V7R744\Desktop\Working\NZWalks\Controllers\RegionsController.cs:line 135
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at NZWalks.MiddleWare.ExceptionHandlerMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\003V7R744\Desktop\Working\NZWalks\MiddleWare\ExceptionHandlerMiddleware.cs:line 21
+2025-09-17 23:41:29.357 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5125/api/Regions/dd37e01f-4a2b-41dd-b5b7-08ddf5568867 - 500 null application/json; charset=utf-8 49168.58ms
+2025-09-17 23:41:30.030 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5125/swagger/index.html - null null
+2025-09-17 23:41:30.151 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5125/swagger/index.html - 200 null text/html;charset=utf-8 121.4454ms
+2025-09-17 23:41:30.233 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5125/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 23:41:30.250 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5125/_vs/browserLink - null null
+2025-09-17 23:41:30.505 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5125/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 271.8238ms
+2025-09-17 23:41:30.678 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 428.0891ms
+2025-09-17 23:41:31.347 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5125/swagger/v1/swagger.json - null null
+2025-09-17 23:41:31.386 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 39.8481ms
+2025-09-17 23:41:33.294 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5125/api/Regions - null null
+2025-09-17 23:41:33.313 +05:30 [INF] Executing endpoint 'NZWalks.Controllers.RegionsController.GetAll (NZWalks)'
+2025-09-17 23:41:33.329 +05:30 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.Controllers.RegionsController (NZWalks).
+2025-09-17 23:41:33.368 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ID], [r].[Code], [r].[Name], [r].[RegionImageURL]
+FROM [Regions] AS [r]
+2025-09-17 23:41:33.377 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.Models.DTO.RegionDTO, NZWalks, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-17 23:41:33.388 +05:30 [INF] Executed action NZWalks.Controllers.RegionsController.GetAll (NZWalks) in 30.962ms
+2025-09-17 23:41:33.393 +05:30 [INF] Executed endpoint 'NZWalks.Controllers.RegionsController.GetAll (NZWalks)'
+2025-09-17 23:41:33.402 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5125/api/Regions - 200 null application/json; charset=utf-8 107.9161ms
+2025-09-17 23:41:35.878 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5125/api/Regions/dd37e01f-4a2b-41dd-b5b7-08ddf5568867 - null null
+2025-09-17 23:41:35.908 +05:30 [INF] Executing endpoint 'NZWalks.Controllers.RegionsController.GetByID (NZWalks)'
+2025-09-17 23:41:35.936 +05:30 [INF] Route matched with {action = "GetByID", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByID(System.Guid) on controller NZWalks.Controllers.RegionsController (NZWalks).
+2025-09-17 23:41:36.051 +05:30 [INF] Executed DbCommand (93ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[ID], [r].[Code], [r].[Name], [r].[RegionImageURL]
+FROM [Regions] AS [r]
+2025-09-17 23:41:36.086 +05:30 [INF] Executing OkObjectResult, writing value of type 'NZWalks.Models.DTO.RegionDTO'.
+2025-09-17 23:41:36.090 +05:30 [INF] Executed action NZWalks.Controllers.RegionsController.GetByID (NZWalks) in 138.063ms
+2025-09-17 23:41:36.100 +05:30 [INF] Executed endpoint 'NZWalks.Controllers.RegionsController.GetByID (NZWalks)'
+2025-09-17 23:41:36.109 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5125/api/Regions/dd37e01f-4a2b-41dd-b5b7-08ddf5568867 - 200 null application/json; charset=utf-8 231.2526ms
+2025-09-17 23:41:44.527 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5125/api/Regions/dd37e01f-4a2b-41dd-b5b7-08ddf5568867 - application/json; charset=utf-8 106
+2025-09-17 23:41:44.549 +05:30 [INF] Executing endpoint 'NZWalks.Controllers.RegionsController.Update (NZWalks)'
+2025-09-17 23:41:44.572 +05:30 [INF] Route matched with {action = "Update", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(System.Guid, NZWalks.Models.DTO.UpdateRegionRequestDTO) on controller NZWalks.Controllers.RegionsController (NZWalks).
+2025-09-17 23:41:49.950 +05:30 [INF] Executed action NZWalks.Controllers.RegionsController.Update (NZWalks) in 5362.9126ms
+2025-09-17 23:41:49.955 +05:30 [INF] Executed endpoint 'NZWalks.Controllers.RegionsController.Update (NZWalks)'
+2025-09-17 23:41:49.998 +05:30 [ERR]  ffd55d71-4bb0-44b1-860e-de244f2ca1b7 :  Unable to cast object of type 'System.Guid' to type 'NZWalks.Models.Domain.Region'.
+System.InvalidCastException: Unable to cast object of type 'System.Guid' to type 'NZWalks.Models.Domain.Region'.
+   at lambda_method91(Closure, QueryContext)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)
+   at NZWalks.Repository.SQLRegionRepository.UpdateAsync(Guid ID, Region region) in C:\Users\003V7R744\Desktop\Working\NZWalks\Repository\SQLRegionRepository.cs:line 49
+   at NZWalks.Controllers.RegionsController.Update(Guid id, UpdateRegionRequestDTO updateRegionRequest) in C:\Users\003V7R744\Desktop\Working\NZWalks\Controllers\RegionsController.cs:line 135
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at NZWalks.MiddleWare.ExceptionHandlerMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\003V7R744\Desktop\Working\NZWalks\MiddleWare\ExceptionHandlerMiddleware.cs:line 21
+2025-09-17 23:41:50.017 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5125/api/Regions/dd37e01f-4a2b-41dd-b5b7-08ddf5568867 - 500 null application/json; charset=utf-8 5490.0569ms

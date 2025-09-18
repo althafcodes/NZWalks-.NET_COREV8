@@ -1,0 +1,18 @@
+2025-09-17 23:28:09.751 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5125/api/Regions/dd37e01f-4a2b-41dd-b5b7-08ddf5568867 - null null
+2025-09-17 23:28:09.771 +05:30 [INF] Executing endpoint 'NZWalks.Controllers.RegionsController.GetByID (NZWalks)'
+2025-09-17 23:28:09.781 +05:30 [INF] Route matched with {action = "GetByID", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByID(System.Guid) on controller NZWalks.Controllers.RegionsController (NZWalks).
+2025-09-17 23:28:09.798 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[ID], [r].[Code], [r].[Name], [r].[RegionImageURL]
+FROM [Regions] AS [r]
+2025-09-17 23:28:09.807 +05:30 [INF] Executing OkObjectResult, writing value of type 'NZWalks.Models.DTO.RegionDTO'.
+2025-09-17 23:28:09.815 +05:30 [INF] Executed action NZWalks.Controllers.RegionsController.GetByID (NZWalks) in 27.7763ms
+2025-09-17 23:28:09.822 +05:30 [INF] Executed endpoint 'NZWalks.Controllers.RegionsController.GetByID (NZWalks)'
+2025-09-17 23:28:09.833 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5125/api/Regions/dd37e01f-4a2b-41dd-b5b7-08ddf5568867 - 200 null application/json; charset=utf-8 81.9233ms
+2025-09-17 23:28:41.832 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5125/swagger/index.html - null null
+2025-09-17 23:28:41.893 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5125/swagger/index.html - 200 null text/html;charset=utf-8 60.5727ms
+2025-09-17 23:28:41.971 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5125/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 23:28:42.036 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5125/_vs/browserLink - null null
+2025-09-17 23:28:42.049 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5125/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 78.32ms
+2025-09-17 23:28:42.127 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 91.1528ms
+2025-09-17 23:28:42.240 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5125/swagger/v1/swagger.json - null null
+2025-09-17 23:28:42.286 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 46.1637ms

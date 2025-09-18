@@ -1,0 +1,53 @@
+﻿@model IEnumerable<RegionsDTO>
+
+
+<h1 class="mt-3">Regions</h1>
+
+<div style="margin-bottom: 15px;">
+    <a asp-controller="Regions" asp-action="Add" class="btn btn-primary">Add Region</a>
+</div>
+
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse:collapse; width:100%;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            foreach (var region in Model)
+            {
+                <tr>
+                    <td>@region.ID</td>
+                    <td>@region.Code</td>
+                    <td>@region.Name</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(region.RegionImageURL))
+                        {
+                            <img src="@region.RegionImageURL" alt="Region Image" style="width:80px; height:auto;" />
+                        }
+                        else
+                        {
+                            <span>No Image</span>
+                        }
+                    </td>
+                    <td>
+                        <a asp-route-id="@region.ID" class="btn btn-light" asp-controller="Regions" asp-action="Edit">Edit</a>
+                    </td>
+
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="4" style="text-align:center;">No Regions Found</td>
+            </tr>
+        }
+    </tbody>
+</table>

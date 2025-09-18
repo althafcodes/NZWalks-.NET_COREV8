@@ -1,0 +1,25 @@
+2025-09-17 23:37:14.527 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5125/api/Regions - null null
+2025-09-17 23:37:14.583 +05:30 [INF] Executing endpoint 'NZWalks.Controllers.RegionsController.GetAll (NZWalks)'
+2025-09-17 23:37:14.595 +05:30 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.Controllers.RegionsController (NZWalks).
+2025-09-17 23:37:14.616 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ID], [r].[Code], [r].[Name], [r].[RegionImageURL]
+FROM [Regions] AS [r]
+2025-09-17 23:37:14.634 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.Models.DTO.RegionDTO, NZWalks, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-17 23:37:14.644 +05:30 [INF] Executed action NZWalks.Controllers.RegionsController.GetAll (NZWalks) in 42.4873ms
+2025-09-17 23:37:14.649 +05:30 [INF] Executed endpoint 'NZWalks.Controllers.RegionsController.GetAll (NZWalks)'
+2025-09-17 23:37:14.660 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5125/api/Regions - 200 null application/json; charset=utf-8 133.4442ms
+2025-09-17 23:37:16.101 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5125/api/Regions/dd37e01f-4a2b-41dd-b5b7-08ddf5568867 - null null
+2025-09-17 23:37:16.145 +05:30 [INF] Executing endpoint 'NZWalks.Controllers.RegionsController.GetByID (NZWalks)'
+2025-09-17 23:37:16.155 +05:30 [INF] Route matched with {action = "GetByID", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByID(System.Guid) on controller NZWalks.Controllers.RegionsController (NZWalks).
+2025-09-17 23:37:16.186 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[ID], [r].[Code], [r].[Name], [r].[RegionImageURL]
+FROM [Regions] AS [r]
+2025-09-17 23:37:16.197 +05:30 [INF] Executing OkObjectResult, writing value of type 'NZWalks.Models.DTO.RegionDTO'.
+2025-09-17 23:37:16.202 +05:30 [INF] Executed action NZWalks.Controllers.RegionsController.GetByID (NZWalks) in 31.5548ms
+2025-09-17 23:37:16.211 +05:30 [INF] Executed endpoint 'NZWalks.Controllers.RegionsController.GetByID (NZWalks)'
+2025-09-17 23:37:16.215 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5125/api/Regions/dd37e01f-4a2b-41dd-b5b7-08ddf5568867 - 200 null application/json; charset=utf-8 114.6352ms
+2025-09-17 23:37:27.108 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5125/api/Regions/dd37e01f-4a2b-41dd-b5b7-08ddf5568867 - application/json; charset=utf-8 103
+2025-09-17 23:37:27.116 +05:30 [INF] Executing endpoint 'NZWalks.Controllers.RegionsController.Update (NZWalks)'
+2025-09-17 23:37:27.119 +05:30 [INF] Route matched with {action = "Update", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(System.Guid, NZWalks.Models.DTO.UpdateRegionRequestDTO) on controller NZWalks.Controllers.RegionsController (NZWalks).
+2025-09-17 23:37:30.796 +05:30 [INF] Executed action NZWalks.Controllers.RegionsController.Update (NZWalks) in 3670.6976ms
+2025-09-17 23:37:30.808 +05:30 [INF] Executed endpoint 'NZWalks.Controllers.RegionsController.Update (NZWalks)'

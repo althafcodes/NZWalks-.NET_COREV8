@@ -1,0 +1,29 @@
+2025-09-17 23:47:39.689 +05:30 [INF] Executed action NZWalks.Controllers.RegionsController.Update (NZWalks) in 62103.7158ms
+2025-09-17 23:47:39.736 +05:30 [INF] Executed endpoint 'NZWalks.Controllers.RegionsController.Update (NZWalks)'
+2025-09-17 23:47:39.804 +05:30 [ERR]  414198a7-9c33-437b-a3c2-2d242255e953 :  Unable to cast object of type 'System.Guid' to type 'NZWalks.Models.Domain.Region'.
+System.InvalidCastException: Unable to cast object of type 'System.Guid' to type 'NZWalks.Models.Domain.Region'.
+   at NZWalks.Repository.SQLRegionRepository.UpdateAsync(Guid ID, Region region)
+   at NZWalks.Controllers.RegionsController.Update(Guid id, UpdateRegionRequestDTO updateRegionRequest)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at NZWalks.MiddleWare.ExceptionHandlerMiddleware.InvokeAsync(HttpContext httpContext)
+2025-09-17 23:47:39.818 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5125/api/Regions/dd37e01f-4a2b-41dd-b5b7-08ddf5568867 - 500 null application/json; charset=utf-8 62269.7261ms
+2025-09-17 23:47:40.612 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5125/swagger/index.html - null null
+2025-09-17 23:47:40.664 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5125/swagger/index.html - 200 null text/html;charset=utf-8 51.1919ms
+2025-09-17 23:47:40.711 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5125/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 23:47:40.735 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5125/_vs/browserLink - null null
+2025-09-17 23:47:40.801 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5125/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 89.5846ms
+2025-09-17 23:47:40.873 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 133.123ms
+2025-09-17 23:47:41.009 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5125/swagger/v1/swagger.json - null null
+2025-09-17 23:47:41.044 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 35.4943ms
